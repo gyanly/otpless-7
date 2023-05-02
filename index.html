@@ -14,7 +14,8 @@
     
 <script>
       function otpless(otplessUser) {
-        alert(JSON.stringify(otplessUser));
+        localStorage.setItem('userDetails',JSON.stringify(otplessUser))
+        console.log(JSON.stringify(otplessUser))
       }
 </script>
 </body>
