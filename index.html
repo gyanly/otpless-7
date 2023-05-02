@@ -15,7 +15,14 @@
 <script>
       function otpless(otplessUser) {
         localStorage.setItem('userDetails',JSON.stringify(otplessUser))
-        console.log(JSON.stringify(otplessUser))
+      
+        const usedetails = JSON.parse(JSON.stringify(otplessUser));
+        console.log(usedetails);
+        document.getElementById('otpless').innerHTML = `
+        Hi, <h2>${usedetails.waName}</h2>
+        Hi, <h2>${usedetails.waNumber}</h2>
+        Email : <p>${usedetails.email}</p>
+        `;
       }
 </script>
 </body>
